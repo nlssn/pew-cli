@@ -1,3 +1,5 @@
+const path = require("path");
+
 const { cmd } = require("../utils/commands");
 
 module.exports = {
@@ -9,11 +11,11 @@ module.exports = {
     console.log(`Cloned starter from ${this.repo}`);
 
     // Remove existing .git folder
-    cmd("rm", ["-rf", `${projectName}/.git`]);
+    cmd("rm", ["-rf", `${process.cwd()}/${projectName}/.git`]);
     console.log("Removed existing .git folder");
 
     // Install npm dependencies
-    cmd("npm.cmd", ["install"], { cwd: process.cwd() + `/${projectName}` });
+    cmd("npm.cmd", ["install"], { cwd: `${process.cwd()}/${projectName}` });
     console.log("Installed dependencies");
 
     // Finish up by telling the user how to run the dev server...

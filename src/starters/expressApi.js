@@ -9,15 +9,18 @@ module.exports = {
     console.log(`Cloned starter from ${this.repo}`);
 
     // Remove existing .git folder
-    cmd("rm", ["-rf", `${projectName}/.git`]);
+    cmd("rm", ["-rf", `${process.cwd()}/${projectName}/.git`]);
     console.log("Removed existing .git folder");
 
     // Copy .env.example to .env
-    cmd("cp", [`${projectName}/.env.example`, `${projectName}/.env`]);
+    cmd("cp", [
+      `${process.cwd()}/${projectName}/.env.example`,
+      `${process.cwd()}/${projectName}/.env`,
+    ]);
     console.log("Created .env from example file");
 
     // Install npm dependencies
-    cmd("npm.cmd", ["install"], { cwd: process.cwd() + `/${projectName}` });
+    cmd("npm.cmd", ["install"], { cwd: `${process.cwd()}/${projectName}` });
     console.log("Installed dependencies");
 
     // Finish up by telling the user how to run the dev server...

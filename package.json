@@ -1,6 +1,6 @@
 {
   "name": "pew-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "pew": "src/index.js"
   },
@@ -17,6 +17,7 @@
   "author": "Johannes Nilsson <johannes@nilsson.im> (https://nilsson.im)",
   "license": "MIT",
   "dependencies": {
+    "cross-spawn": "^7.0.3",
     "inquirer": "^8.2.0",
     "slugify": "^1.6.5"
   }

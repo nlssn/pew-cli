@@ -40,7 +40,6 @@ inquirer
     // Run a switch case to determine which starter script to run
     switch (answers.starter) {
       case "express-api":
-        console.log("what");
         expressApi.execute(projectName);
         break;
       case "11ty":
