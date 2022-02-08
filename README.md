@@ -13,12 +13,10 @@ A CLI tool to quickly get started with a new web project
 
 ## How to use
 
-To use **pew-cli**, you need to install it globally via npm. To do that, run the following commands:
+To use **pew-cli**, you need to install it globally via npm, like so:
 
 ```
-git clone https://github.com/nlssn/pew-cli
-cd pew-cli
-.. more instructions will follow
+npm i pew-cli -g
 ```
 
 Then run `pew` to start a new project.
